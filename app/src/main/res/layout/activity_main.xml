@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity"
+    tools:ignore="MissingConstraints">
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="100dp"
+        android:background="#3f00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#30f0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/v3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#300f"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:constraint_referenced_ids="v1, v2, v3" />
+
+    <com.bruce3x.constraintextensions.AlignCenter
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:align_orientation="both"
+        app:constraint_referenced_ids="root, v1,v2,v3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
